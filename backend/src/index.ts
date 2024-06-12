@@ -55,6 +55,7 @@ app.post("/getpresignedurl", async (c) => {
     s3,
     new PutObjectCommand({
       Bucket: S3_BUCKET_NAME,
+      // Key: `uploads/${body.key}`,
       Key: body.key,
       ContentType: body.type,
     }),
